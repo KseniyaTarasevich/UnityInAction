@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c870a92f0da7b044f8034d16e41dc519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 2
+  axes: 0
   sensitivityHor: 9
   sensitivityVert: 9
   minVert: -45
