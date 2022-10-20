@@ -12,10 +12,10 @@ public class SceneController : MonoBehaviour
     private MemoryCard _secondRevealed;
     private int _score = 0;
 
-    public const int gridRows = 2;
-    public const int gridCols = 4;
-    public const float offsetX = 2f;
-    public const float offsetY = 2.5f;
+    public const int gridRows = 3;
+    public const int gridCols = 8;
+    public const float offsetX = 1f;
+    public const float offsetY = 1.5f;
 
     public bool canReveal
     {
@@ -29,7 +29,7 @@ public class SceneController : MonoBehaviour
     {
         Vector3 startPosition = originalCard.transform.position;
 
-        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3, 3, 3, 0, 0, 1, 1, 2, 2, 0, 0, 1, 1, 2, 2, 3, 3 };
         numbers = ShuffleArray(numbers);
 
         for (int i = 0; i < gridCols; i++)
