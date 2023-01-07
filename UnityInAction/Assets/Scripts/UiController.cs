@@ -8,14 +8,19 @@ public class UiController : MonoBehaviour
     [SerializeField] private Text scoreLabel;
     [SerializeField] private SettingsPopup settingsPopup;
 
-    void Start()
+    private int _score;
+
+    private void Awake()
     {
-        settingsPopup.Close();
+        Messenger.AddListener(GameEvent.ENEMY_HIT, OnEnemyHit);
     }
 
-    void Update()
+    void Start()
     {
-        scoreLabel.text = Time.realtimeSinceStartup.ToString();
+        _score = 0;
+        scoreLabel.text = _score.ToString();
+
+        settingsPopup.Close();
     }
 
     public void OnOpneSettings()
@@ -26,5 +31,17 @@ public class UiController : MonoBehaviour
     public void OnPointerDown()
     {
         Debug.Log("pointer down");
+    }
+
+    private void OnDestroy()
+    {
+        Messenger.RemoveListener(GameEvent.ENEMY_HIT, OnEnemyHit);
+    }
+
+    private void OnEnemyHit()
+    {
+        _score += 1;
+        scoreLabel.text = _score.ToString();
+
     }
 }

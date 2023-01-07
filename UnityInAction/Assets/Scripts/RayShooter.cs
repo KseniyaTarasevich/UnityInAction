@@ -7,10 +7,7 @@ public class RayShooter : MonoBehaviour
     private Camera _camera;
     void Start()
     {
-       _camera = GetComponent<Camera>();
-
-    //    Cursor.lockState = CursorLockMode.Locked;
-    //    Cursor.visible = false;
+        _camera = GetComponent<Camera>();
     }
 
     private void OnGUI()
@@ -37,6 +34,7 @@ public class RayShooter : MonoBehaviour
                 if (target != null)
                 {
                     target.ReactToHit();
+                    Messenger.Broadcast(GameEvent.ENEMY_HIT);
                 }
                 else
                 {
