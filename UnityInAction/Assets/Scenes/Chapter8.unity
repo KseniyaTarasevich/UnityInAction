@@ -1650,7 +1650,7 @@ MonoBehaviour:
   target: {fileID: 963194228}
   moveSpeed: 6
   rotSpeed: 15
-  jumpSpeed: 15
+  jumpSpeed: 35
   gravity: -9.8
   terminalVelocity: -20
   minFall: -1.5
@@ -1665,7 +1665,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.19
+  m_Height: 0.235
   m_Radius: 0.02
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -2258,7 +2258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49d9052bed6b12349b5b21b9d9b96c6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49d9052bed6b12349b5b21b9d9b96c6c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2295,6 +2295,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 49d9052bed6b12349b5b21b9d9b96c6c, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 49d9052bed6b12349b5b21b9d9b96c6c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: de2cf06d4edb32d4ab410d6ec739c310, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 49d9052bed6b12349b5b21b9d9b96c6c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49d9052bed6b12349b5b21b9d9b96c6c, type: 3}
